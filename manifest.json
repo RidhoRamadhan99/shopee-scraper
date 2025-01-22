@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Shopee Product Scraper",
+  "version": "1.0",
+  "description": "Extension untuk scraping data produk dari Shopee",
+  "permissions": ["activeTab", "scripting", "downloads", "storage"],
+  "host_permissions": ["*://*.shopee.co.id/*"],
+  "action": {
+    "default_popup": "src/views/popup.html",
+    "default_icon": {
+      "16": "src/assets/icon.png",
+      "48": "src/assets/icon.png",
+      "128": "src/assets/icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.shopee.co.id/*", "*://*.shopee.com/*"],
+      "js": ["src/js/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["*"],
+      "matches": ["*://*.shopee.co.id/*", "*://*.shopee.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "src/assets/icon.png",
+    "48": "src/assets/icon.png",
+    "128": "src/assets/icon.png"
+  }
+}

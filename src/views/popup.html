@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopee Product Scraper</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <!-- Gunakan script lokal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopee Product Scraper</h1>
+      <div class="status-container">
+        <p>Status: <span id="status">Siap</span></p>
+      </div>
+      <div class="buttons">
+        <button id="startScraping">Mulai Scraping</button>
+        <button id="downloadExcel" disabled>Download Excel</button>
+      </div>
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <p id="progressText">0%</p>
+      </div>
+    </div>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
